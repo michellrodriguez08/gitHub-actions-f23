@@ -22,6 +22,7 @@ class JokesApiApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("Spring app context loaded...");
     }
 
     @Test
@@ -38,6 +39,7 @@ class JokesApiApplicationTests {
         HttpStatusCode status = response.getStatusCode();
         Joke[] jokes = response.getBody();
 
+        System.out.println("Assert our results");
         assertEquals(status, HttpStatus.OK);
         assertTrue(jokes.length > 0);
     }
